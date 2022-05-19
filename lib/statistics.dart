@@ -53,6 +53,9 @@ class _StatisticState extends State<Statistic> {
     super.initState();
     showedTeamsList = teamsScLec;
     selectedTeam = 'G2';
+    setState(() {
+      selectedTeam = 'G2';
+    });
   }
 
   @override
@@ -418,7 +421,6 @@ class _StatisticState extends State<Statistic> {
     String textValue = '';
     double winrate = 0;
     int wins = 0;
-    int losers = 0;
     int games = 0;
     if (option == 1) {
       for (int i = 0; i < list.length; i++) {
@@ -439,8 +441,9 @@ class _StatisticState extends State<Statistic> {
 
       if (games != 0) {
         return textValue + '%';
-      } else
+      } else {
         return 'brak danych';
+      }
     }
     if (option == 2) {
       for (int i = 0; i < list.length; i++) {
@@ -461,8 +464,9 @@ class _StatisticState extends State<Statistic> {
 
       if (games != 0) {
         return textValue + '%';
-      } else
+      } else {
         return 'brak danych';
+      }
     }
     if (option == 3) {
       for (int i = 0; i < list.length; i++) {
@@ -483,8 +487,9 @@ class _StatisticState extends State<Statistic> {
 
       if (games != 0) {
         return textValue + '%';
-      } else
+      } else {
         return 'brak danych';
+      }
     }
     return 'cos nie tak';
   }
